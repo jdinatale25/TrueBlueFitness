@@ -280,10 +280,9 @@ nav.scrolled {
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 24px 80px;
+  padding: 120px 24px 64px;
   background: var(--white);
   position: relative;
   overflow: hidden;
@@ -304,7 +303,7 @@ nav.scrolled {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 72px;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -480,7 +479,7 @@ nav.scrolled {
 
 /* ---------- Why True Blue Section ---------- */
 .why-section {
-  padding: 100px 24px;
+  padding: 80px 24px 60px;
   background: var(--gray);
 }
 
@@ -1047,14 +1046,20 @@ nav.scrolled {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 80px;
-  align-items: start;
+  align-items: stretch;
 }
 
-.about-photo-wrap { position: relative; }
+.about-photo-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .about-photo {
   width: 100%;
-  aspect-ratio: 4/5;
+  flex: 1;
+  min-height: 500px;
   background: var(--black);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1467,6 +1472,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  padding-bottom: 72px;
 }
 
 .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
