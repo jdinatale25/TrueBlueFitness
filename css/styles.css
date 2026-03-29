@@ -282,7 +282,7 @@ nav.scrolled {
 .hero {
   display: flex;
   align-items: center;
-  padding: 120px 24px 64px;
+  padding: 120px 24px 32px;
   background: var(--white);
   position: relative;
   overflow: hidden;
@@ -358,7 +358,7 @@ nav.scrolled {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 48px;
+  margin-bottom: 0;
 }
 
 .hero-divider {
@@ -432,7 +432,7 @@ nav.scrolled {
 }
 
 .hero-brand-logo {
-  width: min(200px, 60%);
+  width: min(320px, 80%);
   height: auto;
   display: block;
 }
@@ -445,11 +445,17 @@ nav.scrolled {
   color: rgba(255,255,255,0.5);
 }
 
+.credentials-section {
+  padding: 24px 24px 40px;
+  background: var(--white);
+}
+
 .hero-info-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .hero-info-card {
@@ -1539,6 +1545,7 @@ footer {
 @media (max-width: 900px) {
   .hero-inner            { grid-template-columns: 1fr; gap: 48px; }
   .hero-visual           { display: flex; max-width: 420px; margin: 0 auto; width: 100%; }
+  .hero-info-cards       { grid-template-columns: 1fr 1fr; }
   .hero-photo-card       { aspect-ratio: 3/4; }
   .features-grid         { grid-template-columns: 1fr; }
   .testimonials-grid     { grid-template-columns: 1fr 1fr; }
@@ -1606,10 +1613,12 @@ footer {
 
   /* Hero */
   .hero {
-    padding: 100px 20px 60px;
+    padding: 100px 20px 28px;
     /* Use svh so address bar doesn't cut off content */
-    min-height: 100svh;
+    min-height: unset;
   }
+
+  .credentials-section { padding: 20px 16px 32px; }
 
   .hero-title { font-size: clamp(30px, 8vw, 42px); }
 
@@ -1627,13 +1636,8 @@ footer {
     text-align: center;
   }
 
-  /* Hero stats: 2-col grid, last item full-width */
-  .hero-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .hero-stats .hero-stat:last-child { grid-column: span 2; }
+  /* Hero info cards: single column on small mobile */
+  .hero-info-cards { grid-template-columns: 1fr 1fr; }
 
   /* Testimonials: single column on small phones */
   .testimonials-grid,
@@ -1685,9 +1689,8 @@ footer {
   .hero-title     { font-size: 28px; }
   .section-heading { font-size: 26px; }
 
-  /* Stack all 3 hero stats */
-  .hero-stats { grid-template-columns: 1fr; }
-  .hero-stats .hero-stat:last-child { grid-column: span 1; }
+  /* Hero info cards: single column on very small phones */
+  .hero-info-cards { grid-template-columns: 1fr; }
 }
 
 /* ---------- Touch device hover guard ---------- */
