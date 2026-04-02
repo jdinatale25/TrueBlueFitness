@@ -1613,10 +1613,14 @@ footer {
 
   /* Hero */
   .hero {
-    padding: 100px 20px 28px;
+    padding: 72px 20px 24px;
     /* Use svh so address bar doesn't cut off content */
     min-height: unset;
   }
+
+  /* Hide brand card on mobile — it's a logo on black, not a real photo.
+     The hero is tighter and more focused without it. */
+  .hero-visual { display: none; }
 
   .credentials-section { padding: 20px 16px 32px; }
 
@@ -1636,8 +1640,8 @@ footer {
     text-align: center;
   }
 
-  /* Hero info cards: single column on small mobile */
-  .hero-info-cards { grid-template-columns: 1fr 1fr; }
+  /* Hero info cards: single column on mobile — 2-col is too cramped below 640px */
+  .hero-info-cards { grid-template-columns: 1fr; }
 
   /* Testimonials: single column on small phones */
   .testimonials-grid,
@@ -1673,24 +1677,15 @@ footer {
   /* Footer */
   .footer-bottom         { flex-direction: column; text-align: center; }
 
-  /* Float CTA: full-width pill on small screens, higher up for iOS home bar */
-  #float-cta {
-    left: 16px;
-    right: 16px;
-    bottom: 32px;
-    border-radius: var(--radius);
-    text-align: center;
-    justify-content: center;
-  }
+  /* Float CTA: hide on mobile — hero already has two CTAs, the floating button is redundant
+     and blocks content near the footer on small screens */
+  #float-cta { display: none; }
 }
 
 /* ---------- Very small phones: ≤ 400px ---------- */
 @media (max-width: 400px) {
   .hero-title     { font-size: 28px; }
   .section-heading { font-size: 26px; }
-
-  /* Hero info cards: single column on very small phones */
-  .hero-info-cards { grid-template-columns: 1fr; }
 }
 
 /* ---------- Touch device hover guard ---------- */
