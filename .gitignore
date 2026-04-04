@@ -4,3 +4,26 @@ Thumbs.db
 node_modules/
 .env
 .env.local
+
+# Local-only files — not needed on GitHub
+IVAN.md
+True Blue Fitness_Brand Guidelines.pdf
+images/ivan-avila-cpt.jpg
+js/reviews.js
+truebluefitnesslogospngs/Asset 1.png
+truebluefitnesslogospngs/Asset 3.png
+truebluefitnesslogospngs/Asset 4.png
+truebluefitnesslogospngs/Asset 5.png
+truebluefitnesslogospngs/Asset 6.png
+truebluefitnesslogospngs/Asset 7.png
+truebluefitnesslogospngs/Asset 8.png
+truebluefitnesslogospngs/Asset 10.png
+truebluefitnesslogospngs/Asset 11.png
+truebluefitnesslogospngs/Asset 12.png
+truebluefitnesslogospngs/Asset 14.png
+truebluefitnesslogospngs/Asset 16.png
+truebluefitnesslogospngs/Asset 17.png
+truebluefitnesslogospngs/Asset 18.png
+truebluefitnesslogospngs/Asset 19.png
+truebluefitnesslogospngs/Asset 20.png
+truebluefitnesslogospngs/Asset 21.png
