@@ -27,3 +27,9 @@ truebluefitnesslogospngs/Asset 18.png
 truebluefitnesslogospngs/Asset 19.png
 truebluefitnesslogospngs/Asset 20.png
 truebluefitnesslogospngs/Asset 21.png
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
